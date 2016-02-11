@@ -1,1 +1,2 @@
 # angulartut
+Technologies used: AngularJS
