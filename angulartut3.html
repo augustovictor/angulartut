@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app3" ng-cloak>
+<head>
+	<meta charset="UTF-8">
+	<title> AngularJS - Tutorial 3</title>
+	<style>
+		[ng\:cloak], [ng-cloak], .ng-cloak {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	
+	<div id="groceryList" ng-controller="gListController">
+		<h3>{{ groceries.length }} Groceries to get</h3>
+		<ul>
+			<li ng-repeat="grocery in groceries">
+				<span>{{ grocery.item }}</span>
+			</li>
+		</ul>
+
+		<h3>Grocery List:</h3>
+		<div ng-include="'groceryList.html'"></div>
+		<input id="showList" type="checkbox" ng-model="showList"> 
+		<label for="showList"> Show unordered list</label>
+		<ng-include src="getList()"></ng-include>
+
+		<label>Type a number (1 to 4)
+			<input type="text" ng-model="someNumber">
+		</label>
+
+		<div ng-switch="someNumber">
+			<p ng-switch-when="1">You entered 1</p>
+			<p ng-switch-when="2">You entered 2</p>
+			<p ng-switch-when="3">You entered 3</p>
+			<p ng-switch-when="4">You entered 4</p>
+			<p ng-switch-default>Not following directions.</p>
+		</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script src="js/exam3.js"></script>
+</body>
+</html>
