@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app4" ng-cloak>
+<head>
+	<meta charset="UTF-8">
+	<title>AngularJS Tutorial 4</title>
+
+	 <style>
+	    [ng\:cloak], [ng-cloak], .ng-cloak {
+	      display: none;
+	    }
+	    .bluetext {
+	      color:blue;
+	    }
+	    .boldtext {
+	      font-weight: bold;
+	    }
+	    .stripedblue {
+	      color:#007FFF;
+	      background-color:#DBE9F4;
+	    }
+	    .stripedbeige {
+	      color:#CC0000;
+	      background-color:#F5F5DC;
+	    }
+    </style>
+
+</head>
+<body>
+	<div ng-controller="app4Controller">
+
+		<table>
+			<thead>
+				<tbody>
+					<tr>
+						<th>City</th>
+						<th>State</th>
+					</tr>
+					<tr ng-repeat="capital in capitals" ng-class-even="'stripedblue'" ng-class-odd="'stripedbeige'">
+						<td>{{ capital.City }}</td>
+						<td>{{ capital.State }}</td>
+					</tr>
+				</tbody>
+			</thead>
+		</table>
+
+		<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+
+		<!-- SELECT ELEMENT CLASS BY A SELECT LIST MENU -->
+
+		<!-- <select name="classes" id="classes" ng-model="textStyling">
+			<option value="bluetext">Bluetext</option>
+			<option value="boldtext">Boldtext</option>
+		</select>
+
+		<p ng-class="textStyling">
+			Some random text
+		</p> -->
+
+		<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+
+		<!-- CHANGE ELEMENTS VISIBILITY -->
+
+		<!-- <input id="dayTimeButton" type="checkbox" ng-model="dayTimeButton">
+		<label for="dayTimeButton"> Day time</label>
+
+		<p ng-hide="!dayTimeButton">Good Morning!</p>
+		<p ng-hide="dayTimeButton">Good Evening!</p> -->
+
+		<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+
+		<!-- ENABLE OR DISABLE BUTTON -->
+
+		<!-- <button ng-disabled="disableButton">Button</button>		
+		<input id="disableButton" type="checkbox" ng-model="disableButton">
+		<label for="disableButton">Disable button</label> -->
+
+		<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+
+		<!-- SOME EVENTS -->
+
+		<!-- <input type="text" ng-blur="blur = blur + 1"
+		ng-click="click = click + 1"
+		ng-dblclick="dblclick = dblclick + 1"
+		ng-copy="copy = copy + 1"
+		ng-paste="paste = paste + 1"
+		ng-cut="cut = cut + 1"
+		ng-focus="focus = focus + 1"
+		ng-model="confirmed"
+		ng-change="change = change + 1"
+		ng-keydown="keydown($event)"
+		ng-mouseenter="mouseenter = mouseenter + 1"
+		ng-mouseleave="mouseleave = mouseleave + 1">
+
+		<h4>Blur events: {{ blur }}</h4>
+		<h4>Click events: {{ click }}</h4>
+		<h4>Double-Click events: {{ dblclick }}</h4>
+		<h4>Copy events: {{ copy }}</h4>
+		<h4>Paste events: {{ paste }}</h4>
+		<h4>Cut events: {{ cut }}</h4>
+		<h4>Focus events: {{ focus }}</h4>
+		<h4>Change events: {{ change }}</h4>
+		<h4>Keydown events: {{ kdKey }}</h4>
+		<h4>Mouse enter events: {{ mouseenter }}</h4>
+		<h4>Mouse leave events: {{ mouseleave }}</h4> -->
+	</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script src="js/exam4.js"></script>
+</body>
+</html>
